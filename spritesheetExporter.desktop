@@ -4,5 +4,5 @@ ServiceTypes=Krita/PythonPlugin
 X-KDE-Library=spritesheetExporter
 X-Python-2-Compatible=false
 X-Krita-Manual=Manual.html
-Name=Spritesheet Exporter
-Comment=Exports spritesheets from the animation timeline
+Name=Spritesheet Horizontal Exporter
+Comment=Exports horizontal spritesheets from the animation timeline

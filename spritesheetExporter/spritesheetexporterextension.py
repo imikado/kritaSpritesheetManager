@@ -28,7 +28,7 @@ class spritesheetExporterExtension(Extension):
     # or it won't show
     def createActions(self, window):
         exportSs = window.createAction("pykrita_spritesheetExporter",
-                                       "Export As Spritesheet",
+                                       "Export As Horizontal Spritesheet",
                                        "tools/scripts")
         # parameter 1 =  the name that Krita uses to identify the action
         # (where is it used though? For key shortcuts?)

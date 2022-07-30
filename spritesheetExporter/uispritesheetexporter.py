@@ -66,7 +66,7 @@ class UISpritesheetExporter(object):
         self.spritesExportDir = QHBoxLayout(self.spritesExportDirWidget)
 
         self.customSettings = QCheckBox()
-        self.customSettings.setChecked(False)
+        self.customSettings.setChecked(True)
         self.customSettings.stateChanged.connect(self.toggleHideable)
 
         self.hideableWidget = QFrame()  # QFrames are a type of widget
@@ -102,7 +102,9 @@ class UISpritesheetExporter(object):
 
         self.rows = QSpinBox(minimum = self.exp.defaultSpace)
         self.columns = QSpinBox(minimum = self.exp.defaultSpace)
-        self.rows.setValue(self.exp.defaultSpace)
+        #self.rows.setValue(self.exp.defaultSpace)
+        self.rows.setValue(1)
+    
         self.columns.setValue(self.exp.defaultSpace)
 
         self.start = QSpinBox(minimum = self.exp.defaultTime)
@@ -162,6 +164,7 @@ class UISpritesheetExporter(object):
         return layout
 
     def initialize_export(self):
+
         # putting stuff in boxes
         # and boxes in bigger boxes
         self.exportName.setText(self.exp.exportName)
@@ -352,6 +355,10 @@ class UISpritesheetExporter(object):
 
     def showExportDialog(self):
         self.doc = self.app.activeDocument()
+        if self.doc and self.doc.fileName():
+            exportFilename = str(Path(self.doc.fileName()).stem)
+            self.exportName.setText(exportFilename)
+
         if self.exportDirTx.text() == "":
             self.resetExportDir()
         self.mainDialog.setWindowTitle(i18n("SpritesheetExporter"))

@@ -1,9 +1,11 @@
 # kritaSpritesheetExporter
 
+This is a modification of original plugin, I force export with same krita document name and i pre-select 1 rows to export to an horizontal png image.
+
 krita plugin using the Krita python script manager; it works best using Krita 4.2.x or later.
 With earlier Krita 4.x versions, it will work but you won't get the automatic animation length detection; it gives an error and won't run at 3.x if I recall correctly.
 
-**Exports to a spritesheet** from the animation timeline (using all visible layers) (the spritesheet's number of rows and columns are user-defined; default is Best Fit (trying to form a square))
+**Exports to a spritesheet** from the animation timeline (using all visible layers) (the spritesheet's number of rows and columns are user-defined; default is Horizontal Setup)
 
 - **To import a spritesheet** to the animation timeline of a new layer, simply (with your spritesheet open) go to Image > Image Split then (in a new file of the same dimensions as one frame), File > Import Animation Frames (https://docs.krita.org/en/user_manual/animation.html#importing-animation-frames)
 - **To merge spritesheet**, go to File > Import Animation Frames (https://docs.krita.org/en/user_manual/animation.html#importing-animation-frames) and then Tools > Scripts > Export As Spritesheet
