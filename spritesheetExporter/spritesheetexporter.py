@@ -317,6 +317,16 @@ class SpritesheetExporter(object):
             self.rows * height,
             self.exportName,
             col, depth, profile, res)
+        
+    
+        topLevelLayers = sheet.topLevelNodes()
+
+        for layerLoop in topLevelLayers:
+            layerLoop.setLocked(False)
+            
+            layerLoop.setVisible(False)
+
+
         if (debugging):
             debugPrint("new doc name: " + sheet.name())
             debugPrint("old doc width: " + str(width))
